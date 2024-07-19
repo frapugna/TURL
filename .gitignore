@@ -114,3 +114,4 @@ cache/
 .idea/
 __MACOSX/
 core
+*__pycache__*

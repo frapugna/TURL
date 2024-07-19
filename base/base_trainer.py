@@ -1,7 +1,7 @@
 import torch
 from abc import abstractmethod
 from numpy import inf
-from logger import TensorboardWriter
+from experiments.ablation_modified.code_TURL.TURL.logger import TensorboardWriter
 
 
 class BaseTrainer:

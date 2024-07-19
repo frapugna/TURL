@@ -1,3 +1,5 @@
+This code was adapted from the original [TURL](https://github.com/sunlab-osu/TURL.git) and includes an adaptation of the `TURL_get_embeddings.py` file taken form the [TURL_embeddings_for_thetis](https://github.com/leventidis/TURL_embeddings_for_thetis.git) repository from @leventidis
+
 # TURL
 This Repo contains code and data for [Deng, Xiang, et al. "TURL: table understanding through representation learning." Proceedings of the VLDB Endowment 14.3 (2020): 307-319.](http://www.vldb.org/pvldb/vol14/p307-deng.pdf) If you use TURL in your project, please cite the following paper:
 

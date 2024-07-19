@@ -4,13 +4,14 @@ from torch.utils.data.sampler import Sampler
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from base import BaseDataLoader
+from experiments.ablation_modified.code_TURL.TURL.base import BaseDataLoader
 import pickle
 import numpy as np
 import json
 import os
 from tqdm import tqdm
-from torch._six import string_classes
+#from torch._six import string_classes
+string_classes = str
 import re
 import random
 import copy
@@ -21,7 +22,7 @@ from functools import partial
 
 import pdb
 
-from model.transformers import BertTokenizer
+from experiments.ablation_modified.code_TURL.TURL.model.transformers import BertTokenizer
 
 
 def mask_tokens(inputs, tokenizer, mlm_probability=0.15):
@@ -440,7 +441,10 @@ class WikiHybridTableDataset(Dataset):
         if tokenizer is not None:
             self.tokenizer = tokenizer
         else:
-            self.tokenizer = BertTokenizer.from_pretrained('data/pre-trained_models/bert-base-uncased')
+            try:
+                self.tokenizer = BertTokenizer.from_pretrained('data/pre-trained_models/bert-base-uncased')
+            except:
+                self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
         self.src = src
         self.mode = mode #{0:pretrain,1:core entity retrieval,2:cell filling}
         self.max_cell = float(max_cell)

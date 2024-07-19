@@ -27,10 +27,10 @@ from torch import nn
 from torch.nn import CrossEntropyLoss, MSELoss, MultiLabelSoftMarginLoss, MultiMarginLoss, BCEWithLogitsLoss
 import torch.nn.functional as F
 
-from model.transformers.modeling_utils import PreTrainedModel, prune_linear_layer
-from model.transformers.configuration_bert import BertConfig
-from model.transformers.file_utils import add_start_docstrings
-from model.transformers.modeling_bert import *
+from experiments.ablation_modified.code_TURL.TURL.model.transformers.modeling_utils import PreTrainedModel, prune_linear_layer
+from experiments.ablation_modified.code_TURL.TURL.model.transformers.configuration_bert import BertConfig
+from experiments.ablation_modified.code_TURL.TURL.model.transformers.file_utils import add_start_docstrings
+from experiments.ablation_modified.code_TURL.TURL.model.transformers.modeling_bert import *
 import pdb
 
 logger = logging.getLogger(__name__)
